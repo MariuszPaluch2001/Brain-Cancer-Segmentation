@@ -110,4 +110,4 @@ torch.save(model.state_dict(), "models/unet.pt")
 
 import shutil
 
-shutil.copytree("models/", "../model_microservice/models", dirs_exist_ok=True)
+shutil.copytree("models/", "../../app/backend/model_microservice/models", dirs_exist_ok=True)

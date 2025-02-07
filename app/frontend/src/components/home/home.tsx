@@ -20,11 +20,11 @@ function Home() {
 
                     if (selector === "#MRI") {
                         const data = await apiCall(blob);
-                        if (!data){
+                        if (!data) {
                             selector = "#Results";
                             const elem = document.querySelector(selector);
-                            if (!!elem) elem.prepend("Error!")
-                            return
+                            if (!!elem) elem.prepend("Error!");
+                            return;
                         }
                         const img = new Image();
                         img.src = URL.createObjectURL(data);
