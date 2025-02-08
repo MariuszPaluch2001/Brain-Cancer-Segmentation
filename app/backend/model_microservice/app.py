@@ -43,7 +43,7 @@ def segmentation():
             image.save(img_io, "jpeg")
             img_io.seek(0)
             return send_file(img_io, mimetype="image/jpeg")
-            
+
         output[output >= 0.0] = 1
         output[output < 0.0] = 0
 
@@ -55,5 +55,10 @@ def segmentation():
         return send_file(img_io, mimetype="image/jpeg")
 
 
+@app.route("/healthcheck", methods=["GET"])
+def healthcheck():
+    return "Model microservice healthcheck"
+
+
 if __name__ == "__main__":
-    app.run()
+    app.run(host="0.0.0.0", port="5000")

@@ -1,6 +1,6 @@
 import {default as axios} from "axios";
 
-export const modelApiPost = async (image: Blob) => {
+export const converTifImagePost = async (image: Blob) => {
     let formData = new FormData();
     formData.append("file", image);
 

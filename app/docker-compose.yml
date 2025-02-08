@@ -1,0 +1,10 @@
+version: '3'
+services:
+  model_microservice:
+      build: ./backend/model_microservice/
+      ports:
+        - '5000:5000'
+  converter_microservice:
+      build: ./backend/converter/
+      ports:
+        - '5001:5001'
