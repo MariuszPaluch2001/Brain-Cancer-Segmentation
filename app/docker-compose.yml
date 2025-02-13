@@ -8,3 +8,15 @@ services:
       build: ./backend/converter/
       ports:
         - '5001:5001'
+  web:
+    build: ./frontend/
+    ports:
+      - "3000:3000"
+    volumes:
+     - ./frontend:/app
+     - ./frontend/node_modules:/app/node_modules
+    environment:
+      NODE_ENV: development
+    stdin_open: true
+    tty: true
+    command: npm run start

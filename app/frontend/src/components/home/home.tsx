@@ -20,8 +20,9 @@ const Home: FC = (): JSX.Element => {
                     if (!!data) {
                         const img = new Image();
                         img.src = URL.createObjectURL(data);
-                        let selector = "#" + filename.includes("mask") ? selectorMask : selectorMRI;
+                        let selector = "#" + (filename.includes("mask") ? selectorMask : selectorMRI);
                         const elem = document.querySelector(selector);
+                        console.log(selector);
                         if (!!elem) elem.prepend(img);
 
                         if (selector === "#" + selectorMRI) {
@@ -30,6 +31,8 @@ const Home: FC = (): JSX.Element => {
                                 const img = new Image();
                                 img.src = URL.createObjectURL(data);
                                 selector = "#" + selectorResults;
+                                console.log(selector);
+
                                 const elem = document.querySelector(selector);
                                 if (!!elem) elem.prepend(img);
                             }
