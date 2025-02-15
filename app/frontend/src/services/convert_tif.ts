@@ -5,7 +5,7 @@ export const converTifImagePost = async (image: Blob) => {
     formData.append("file", image);
 
     try {
-        const response = await axios.post<Blob>("http://127.0.0.1:5000/segmentation", formData, {
+        const response = await axios.post<Blob>("http://127.0.0.1:5001/convert", formData, {
             headers: {
                 "Access-Control-Allow-Origin": "*",
                 "Access-Control-Allow-Headers": "*",
