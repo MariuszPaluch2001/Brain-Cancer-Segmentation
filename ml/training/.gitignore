@@ -1,5 +1,4 @@
 __pycache__/
-models/unet.pt
 data/
 results/
 venv/
