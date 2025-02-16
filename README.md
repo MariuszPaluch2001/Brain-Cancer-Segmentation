@@ -20,9 +20,9 @@ This project is an AI-powered system for brain tumor segmentation from MRI scans
 ## Usage
 
 ### Docker
-    ```bash
-        cd app
-        docker compose up -d
-    ```
+```bash
+    cd app
+    docker compose up -d
+```
 ## License
 This project is open-source under the MIT License.
