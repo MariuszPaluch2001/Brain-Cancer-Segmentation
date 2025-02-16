@@ -7,3 +7,10 @@
     color: white;
     width: 100%;
 }
+
+.float-container {
+    display: flex;
+}
+.float-child {
+    flex: 1;
+}  
